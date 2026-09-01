@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- Header section starts from here  -->
+  <header>
+
+    <div class="container">
+
+      <div class="header_container">
+
+        <a href="index.html" class="logo_container">
+          <img src="assets/icons/ChatGPT Image Aug 10, 2026, 04_41_20 PM.png" alt="website_logo">
+          <span class="website_name">Scenta</span>
+        </a>
+
+        <nav class="nevigation_container">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Collections</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="action_container">
+
+          <div class="search_container">
+            <button type="button" aria-label="Search">
+              <i data-lucide="search"></i>
+            </button>
+          </div>
+
+          <div class="wishlist_container">
+            <button type="button" aria-label="Wishlist">
+              <i data-lucide="heart"></i>
+            </button>
+          </div>
+
+          <div class="profile_container">
+            <button type="button" aria-label="Profile">
+              <i data-lucide="user"></i>
+            </button>
+          </div>
+
+          <div class="cart_container">
+            <button type="button" aria-label="Shopping cart">
+              <i data-lucide="shopping-cart"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <button class="three_lines_menu_button" type="button" aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+      <nav class="mobile_hover_response_menu" aria-label="Mobile navigation">
+
+        <ul class="mobile_nav_list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">Collections</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+
+        <div class="mobile_menu_actions">
+          <a href="">
+            <i data-lucide="heart"></i>
+            <span>Wishlist</span>
+          </a>
+          <a href="">
+            <i data-lucide="user"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+  <main>
+
+    <section class="product_image_and_product_description">
+
+      <div class="container">
+
+        <div class="hero_container">
+
+          <div class="hero_content">
+
+            <p class="hero_subtitle">Discover Your Signature Scent</p>
+
+            <h1 class="hero_title">
+              Fragrance That Feels Like You
+            </h1>
+
+            <p class="hero_description">
+              Explore elegant fragrances crafted to become part of your
+              everyday story.
+            </p>
+
+            <a href="" class="hero_button">
+              Explore Collection
+            </a>
+
+          </div>
+
+          <div class="hero_image_container">
+
+            <img src="assets/images/ChatGPT Image Aug 18, 2026, 10_13_20 PM.jpg" alt="Scenta fragrance collection">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+  <footer>
+
+  </footer>
+<!-- Javascript section -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const menuButton = document.querySelector(".three_lines_menu_button");
+      const mobileMenu = document.querySelector(".mobile_hover_response_menu");
+
+      if (!menuButton || !mobileMenu) {
+        console.log("Menu button or mobile menu not found.");
+        return;
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.remove("open");
+
+        menuButton.innerHTML = '<i data-lucide="menu"></i>';
+
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+
+        lucide.createIcons();
+      }
+
+
+      menuButton.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        const menuIsOpen = mobileMenu.classList.toggle("open");
+
+        if (menuIsOpen) {
+
+          menuButton.innerHTML = '<i data-lucide="x"></i>';
+
+          menuButton.setAttribute("aria-expanded", "true");
+          menuButton.setAttribute("aria-label", "Close menu");
+
+        } else {
+
+          menuButton.innerHTML = '<i data-lucide="menu"></i>';
+
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Open menu");
+
+        }
+
+        lucide.createIcons();
+      });
+
+
+      const mobileMenuLinks = document.querySelectorAll(
+        ".mobile_nav_list a, .mobile_menu_actions a"
+      );
+
+      mobileMenuLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+          closeMobileMenu();
+        });
+
+      });
+
+
+      document.addEventListener("click", function (event) {
+
+        const clickedInsideMenu = mobileMenu.contains(event.target);
+        const clickedMenuButton = menuButton.contains(event.target);
+
+        if (
+          mobileMenu.classList.contains("open") &&
+          !clickedInsideMenu &&
+          !clickedMenuButton
+        ) {
+          closeMobileMenu();
+        }
+
+      });
+
+
+      lucide.createIcons();
+
+    });
+  </script>
+</body>
+
+</html>
