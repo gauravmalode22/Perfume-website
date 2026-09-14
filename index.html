@@ -28,45 +28,36 @@
             <li><a href="">Shop</a></li>
             <li><a href="">Collections</a></li>
             <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="">Contact</a></li>            
           </ul>
         </nav>
-
         <div class="action_container">
-
           <div class="search_container">
             <button type="button" aria-label="Search">
               <i data-lucide="search"></i>
             </button>
           </div>
-
           <div class="wishlist_container">
             <button type="button" aria-label="Wishlist">
               <i data-lucide="heart"></i>
             </button>
           </div>
-
           <div class="profile_container">
             <button type="button" aria-label="Profile">
               <i data-lucide="user"></i>
             </button>
           </div>
-
           <div class="cart_container">
             <button type="button" aria-label="Shopping cart">
               <i data-lucide="shopping-cart"></i>
             </button>
           </div>
-
         </div>
-
         <button class="three_lines_menu_button" type="button" aria-label="Open menu" aria-expanded="false">
           <i data-lucide="menu"></i>
         </button>
-
       </div>
       <nav class="mobile_hover_response_menu" aria-label="Mobile navigation">
-
         <ul class="mobile_nav_list">
           <li><a href="index.html">Home</a></li>
           <li><a href="">Shop</a></li>
@@ -74,7 +65,6 @@
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
         </ul>
-
         <div class="mobile_menu_actions">
           <a href="">
             <i data-lucide="heart"></i>
@@ -85,13 +75,10 @@
             <span>Profile</span>
           </a>
         </div>
-
       </nav>
     </div>
-
   </header>
   <main>
-
     <section class="product_image_and_product_description">
 
       <div class="container">
@@ -130,6 +117,41 @@
     </section>
 
   </main>
+  <section class="product_grid_section">
+  <div class="container">
+
+    <div class="section_heading">
+      <p class="section_subtitle">Our Collection</p>
+      <h2 class="section_title">Best Sellers</h2>
+    </div>
+
+    <div class="product_grid">
+
+      <article class="product_card">
+        <div class="product_image_wrapper">
+          <img src="assets/images/product1.jpg" alt="Amber Noir perfume bottle">
+          <button type="button" class="wishlist_toggle" aria-label="Add to wishlist">
+            <i data-lucide="heart"></i>
+          </button>
+        </div>
+        <div class="product_info">
+          <h3 class="product_name">Amber Noir</h3>
+          <p class="product_category">Eau de Parfum</p>
+          <div class="product_footer">
+            <span class="product_price">₹2,499</span>
+            <button type="button" class="add_to_cart_btn" aria-label="Add to cart">
+              <i data-lucide="shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Repeat .product_card for each product -->
+
+    </div>
+
+  </div>
+</section>
   <footer>
 
   </footer>
