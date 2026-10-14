@@ -1,0 +1,110 @@
+
+
+:root{
+  --primary-color:#2F241F;
+  --secondary-color:#8B6F47;
+  --accent-color:#C69C6D;
+  --background-color:#e2f1e4;
+  --surface-color:#FFFFFF;
+  --muted-color:#756B58;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+body{
+  font-family:'Inter', sans-serif;
+  color:var(--primary-color);
+  background:var(--background-color);
+}
+
+/* header */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1rem;
+  padding:1rem 3rem;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  text-decoration:none;
+  color:var(--primary-color);
+}
+.brand img{ width:34px; height:34px; object-fit:contain; }
+.brand span{ font-family:'Playfair Display', serif; font-weight:600; font-size:1.1rem; }
+.nav{ display:flex; gap:1.8rem; flex-wrap:wrap; }
+.nav a{ color:var(--primary-color); text-decoration:none; }
+.nav a:hover{ color:var(--secondary-color); }
+
+/* main: two columns */
+.contact{
+  display:flex;
+  gap:3rem;
+  max-width:1000px;
+  margin:2rem auto 4rem;
+  padding:0 1.5rem;
+}
+.contact-intro{ flex:1; }
+.contact-form{
+  flex:1;
+  background:var(--surface-color);
+  padding:2rem;
+  border-radius:12px;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  font-size:0.75rem;
+  font-weight:600;
+  color:var(--secondary-color);
+}
+h1{
+  font-family:'Playfair Display', serif;
+  font-size:2.4rem;
+  margin:0.5rem 0 1rem;
+}
+.sub{ color:var(--muted-color); line-height:1.6; }
+
+.details{ list-style:none; margin-top:2rem; }
+.details li{ margin-bottom:1rem; }
+.details strong{ display:block; font-size:0.8rem; color:var(--secondary-color); }
+
+/* form */
+.field{ margin-bottom:1rem; }
+.field label{ display:block; font-size:0.85rem; color:var(--muted-color); margin-bottom:0.35rem; }
+.field input,
+.field textarea{
+  width:100%;
+  padding:0.7rem;
+  border:1px solid #d9d2c3;
+  border-radius:6px;
+  font-family:inherit;
+  font-size:0.95rem;
+}
+.field input:focus,
+.field textarea:focus{ outline:2px solid var(--accent-color); border-color:transparent; }
+
+button{
+  width:100%;
+  padding:0.85rem;
+  border:none;
+  border-radius:6px;
+  background:var(--primary-color);
+  color:#fff;
+  font-weight:600;
+  font-size:0.95rem;
+  cursor:pointer;
+}
+button:hover{ background:#463731; }
+
+.footer{ text-align:center; color:var(--muted-color); font-size:0.85rem; padding:1.5rem; }
+
+/* mobile */
+@media (max-width:768px){
+  .topbar{ padding:1rem 1.2rem; }
+  .contact{ flex-direction:column; gap:2rem; }
+}
