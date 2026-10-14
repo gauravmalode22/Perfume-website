@@ -10,17 +10,39 @@
   a{text-decoration:none;color:inherit}
 
   /* Header */
-  header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-    padding:18px 40px;background:#fff;box-shadow:0 2px 12px rgba(44,34,52,.08);position:sticky;top:0;z-index:5}
-  .logo{font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:2px;color:#7a5c99}
-  nav a{margin-left:26px;font-size:15px;padding-bottom:4px;border-bottom:2px solid transparent}
-  nav a:hover,nav a.active{border-color:#b8924a}
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    padding:18px 40px;
+    background:#fff;
+    box-shadow:0 2px 12px rgba(44,34,52,.08);
+    position:sticky;top:0;z-index:5}
+  .logo{
+    font-family:Georgia,serif;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#7a5c99
+  }
+
+
 
   /* Banner */
-  .banner{text-align:center;padding:70px 20px;color:#fff;
+  .banner{
+    text-align:center;
+    padding:70px 20px;
+    color:#fff;
     background:linear-gradient(135deg,#2c2234,#7a5c99)}
-  .banner h1{font-family:Georgia,serif;font-size:42px;margin:0 0 8px}
-  .banner p{margin:0;font-size:18px;color:#e7d6e0}
+  .banner h1{
+    font-family:Georgia,serif;
+    font-size:42px;margin:0 0 8px}
+  .banner p{
+    margin:0;
+    font-size:18px;
+    color:#e7d6e0}
 
   /* Products */
   main{
@@ -31,10 +53,25 @@
   .grid{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px}
-  .card{background:#fff;border-radius:14px;overflow:hidden;position:relative;
-    box-shadow:0 4px 14px rgba(44,34,52,.08);transition:transform .25s,box-shadow .25s}
-  .card:hover{transform:translateY(-6px);box-shadow:0 12px 26px rgba(44,34,52,.16)}
-  .badge{position:absolute;top:12px;left:12px;background:#b8924a;color:#fff;font-size:12px;padding:3px 10px;border-radius:20px}
+  .card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 4px 14px rgba(44,34,52,.08);
+    transition:transform .25s,box-shadow .25s
+  }
+  .card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 26px rgba(44,34,52,.16)
+  }
+  .badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#b8924a;
+    color:#fff;
+    font-size:12px;padding:3px 10px;border-radius:20px}
 
   .photo{height:230px;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#f4eef3,#e7d6e0)}
   .bottle{position:relative;width:70px;height:130px}
@@ -48,7 +85,7 @@
   .stars{color:#b8924a;font-size:14px;letter-spacing:2px}
   .price{font-size:20px;font-weight:bold;margin:8px 0 14px}
   .price s{font-size:14px;color:#999;font-weight:normal;margin-left:6px}
-  .btn{display:block;background:#7a5c99;color:#fff;padding:11px;border-radius:8px;transition:background .2s}
+  .btn{display:block;background:#7a5c99;color:#fff;padding:11px;border-radius:8px;transition:     .2s}
   .btn:hover{background:#2c2234}
 
   footer{background:#2c2234;color:#e7d6e0;text-align:center;padding:26px 20px;font-size:14px}
